@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rainfall-app
+  name: rainfall-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rainfall-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rainfall-app
+    spec:
+      containers:
+        - image: rainfall:v4
+          name: rainfall
+          env:
+            - name: RESOURCE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: rainfall-config
+                  key: resource_url
+            - name: STATION_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: rainfall-config
+                  key: station_name
+          resources: {}
+status: {}
