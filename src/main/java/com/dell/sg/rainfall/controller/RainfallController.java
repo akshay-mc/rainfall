@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 @RestController
 public class RainfallController {
@@ -34,6 +35,7 @@ public class RainfallController {
             Response res = restTemplate.getForObject(resourceUrl, Response.class);
 
             DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+            dateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Singapore"));
             String formattedTime = dateFormat.format(res.getItems().get(0).getTimestamp());
 
             for (Station station : res.getMetadata().getStations()) {

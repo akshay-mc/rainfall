@@ -18,7 +18,7 @@ spec:
         app: rainfall-app
     spec:
       containers:
-        - image: rainfall:v4
+        - image: rainfall:v5
           name: rainfall
           env:
             - name: RESOURCE_URL

@@ -4,4 +4,4 @@ metadata:
   name: rainfall-config
 data:
   resource_url: "https://api.data.gov.sg/v1/environment/rainfall"
-  station_name: "Upper Changi Road North"
+  station_name: "Marina Gardens Drive"
