@@ -1,6 +1,5 @@
 package com.dell.sg.rainfall;
 
-import com.dell.sg.rainfall.controller.RainfallController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
