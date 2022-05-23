@@ -4,6 +4,7 @@ import com.dell.sg.rainfall.model.Reading;
 import com.dell.sg.rainfall.model.Response;
 import com.dell.sg.rainfall.model.Station;
 import org.springframework.http.HttpStatus;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
